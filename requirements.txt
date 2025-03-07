@@ -1,0 +1,2 @@
+yfinance
+llama-cpp-python
