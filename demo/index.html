@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Content Finder</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .result { border: 1px solid #ddd; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Netflix Content Finder</h1>
+        <div>
+            <label for="query">Search for content:</label>
+            <input type="text" id="query" placeholder="e.g., Show me something like Stranger Things">
+        </div>
+        <div>
+            <button id="submit">Find Content</button>
+        </div>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#submit").click(function() {
+                var query = $("#query").val();
+                if (!query) {
+                    alert("Please enter a search query.");
+                    return;
+                }
+                
+                var apiUrl = window.location.origin + "/invocations";
+                
+                // Show loading message
+                $("#results").html('Loading...');
+                
+                $.ajax({
+                    url: apiUrl,
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        inputs: { query: [query] },
+                        params: { 
+                            top_n: 5, 
+                            embedding_index: 0 
+                        }
+                    }),
+                    success: function(response) {
+                        $("#results").empty();
+                        
+                        if (response.predictions && response.predictions.length > 0) {
+                            response.predictions.forEach(function(item) {
+                                $("#results").append(`
+                                    <div class="result">
+                                        <h3>${item.title}</h3>
+                                        <p>Genre: ${item.genre} | Year: ${item.year}</p>
+                                        <p>${item.description}</p>
+                                        <p>Match: ${(item.similarity * 100).toFixed(1)}%</p>
+                                    </div>
+                                `);
+                            });
+                        } else {
+                            $("#results").html('No matching content found.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $("#results").html('Error: ' + error);
+                        console.error("Error details:", xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
