@@ -117,7 +117,3 @@ if __name__ == "__main__":
     
     # Generate and save embeddings
     generate_netflix_embeddings(input_csv, output_csv)
-    
-    print("\nNext steps:")
-    print("1. Use these embeddings with your MLflow model")
-    print("2. Update your deployment code to use 'data/hg_embedded.csv' as the embeddings path")
