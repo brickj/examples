@@ -119,7 +119,3 @@ if __name__ == "__main__":
         # Show similarity score
         print(f"   Similarity: {row['similarity_score']:.4f}")
         print("-" * 80)
-
-        print("\nNext steps:")
-        print("1. Use these embeddings with your MLflow model")
-        print("2. Update your deployment code to use 'data/hg_embedded.csv' as the embeddings path")
