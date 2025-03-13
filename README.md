@@ -18,7 +18,7 @@ Key features:
 - PyTorch and Transformers
 - Basic understanding of HTML and JavaScript
 
-## Installation XXXXXXXXXXX
+## Installation
 
 ```bash
 # Clone the repository 
