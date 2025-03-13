@@ -171,7 +171,7 @@ success: function(response) {
 Below is the tutorial data flow diagram:
 
 
-![Netflix Recommendation App Data Flow](images/flowchart.png)
+![Netflix Recommendation App Data Flow](images/flow_chart.png)
 
 
 
