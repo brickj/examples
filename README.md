@@ -230,7 +230,7 @@ Here's what happens when you use the application:
 - Click “Service”
 
 
-![Configure Deployment](images/deployment1.png)  XXXXXXX
+![Configure Deployment](images/deployment1.png)
 
 
 - Fill out the Deployment information
@@ -241,12 +241,12 @@ Here's what happens when you use the application:
 - Choose your workspace
 - Click “Deploy”
 
-![Configure Deployment](images/deployment2.png)  XXXXXXX
+![Configure Deployment](images/deployment2.png)
 
 
 
 
-### 3. Interact with the model  XXXXXXXXXXX
+### 3. Interact with the model
 
 Click the link at the top of the Swagger API page to access the UI
 
