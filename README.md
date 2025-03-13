@@ -9,7 +9,7 @@ Key features:
 - MLflow for model packaging and deployment
 - Simple HTML interface for users to interact with the model
 
-![Netflix Recommendation UI](https://via.placeholder.com/800x400?text=Netflix+Recommendation+UI)
+![Netflix Recommendation UI](images/ui_screen.png)
 
 ## Prerequisites
 
