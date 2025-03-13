@@ -223,23 +223,23 @@ Here's what happens when you use the application:
 
 6. **Displaying Results**: The UI processes this response and displays each recommendation.
 
-## Deploy in AI Studi XXXXXX
+## Deploy in AI Studio
 
-•	Execute the 03_deployment.py to set up the deployment
-o	Select the “Deployments” tab
-o	Click “Service”
+- Execute the 03_deployment.py to set up the deployment
+- Select the “Deployments” tab
+- Click “Service”
 
 
 ![Configure Deployment](images/deployment1.png)  XXXXXXX
 
 
-o	Fill out the Deployment information
-o	Add a “Service Name”
-o	Select the model
-o	Choose the next highest model version
-o	Select “With GPU” configuration
-o	Choose your workspace
-o	Click “Deploy”
+- Fill out the Deployment information
+- Add a “Service Name”
+- Select the model
+- Choose the next highest model version
+- Select “With GPU” configuration
+- Choose your workspace
+- Click “Deploy”
 
 ![Configure Deployment](images/deployment2.png)  XXXXXXX
 
