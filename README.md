@@ -25,20 +25,30 @@ Key features:
 https://github.com/brickj/examples.git
 
 # Install dependencies
-pip install mlflow pandas numpy scikit-learn torch transformers
+pip install -r requirements.txt
+
 ```
 
 ## Project Structure
 
 ```
-recommendation-app/
+examples/
 ├── data/
-│   ├── netflix_reviews.csv     # Netflix dataset
-│   ├── embedded.csv            # Pre-computed embeddings
+│   ├── embedded.csv
+│   └── netflix_reviews.csv
 ├── demo/
-│   ├── index.html              # Web UI for the model
-├── 03_deployment.py            # Main deployment script
-├── README.md                   # This file
+│   └── index.html
+├── images/
+│   ├── deployment1.png
+│   ├── deployment2.png
+│   ├── flow_chart.png
+│   └── ui_screen.png
+├── 00_generate_netflix_data.py
+├── 01_embed_data.py
+├── 02_query_embedded_data.py
+├── 03_deployment.py
+├── README.md
+└── requirements.txt
 ```
 
 ## How It Works
